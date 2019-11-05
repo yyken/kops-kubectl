@@ -17,10 +17,6 @@ RUN wget -q -O kubectl https://storage.googleapis.com/kubernetes-release/release
   && chmod +x ./kubectl \
   && mv ./kubectl /usr/local/bin/kubectl
 
-# Install Kustomize
-RUN wget -q -O kustomize https://github.com/kubernetes-sigs/kustomize/releases/download/v${KUSTOMIZE_VERSION:-'3.3.0'}/kustomize_${KUSTOMIZE_VERSION:-'3.1.0'}_linux_amd64 \
-  && chmod +x ./kustomize \
-  && mv ./kustomize /usr/local/bin/kustomize
 
 # install helm
 # RUN apk add --no-cache openssl which curl \
