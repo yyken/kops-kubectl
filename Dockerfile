@@ -8,7 +8,7 @@ RUN apk add --no-cache openssh-keygen gettext jq git bash coreutils curl gomplat
 RUN apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community git-crypt
 
 # Install KOPS
-RUN wget -q -O kops https://github.com/kubernetes/kops/releases/download/${KOPS_VERSION:-'1.15.0'}/kops-linux-amd64 \
+RUN wget -q -O kops https://github.com/kubernetes/kops/releases/download/${KOPS_VERSION:-'1.14.1'}/kops-linux-amd64 \
   && chmod +x kops \
   && mv kops /usr/local/bin/kops
 
