@@ -2,7 +2,6 @@ FROM python:3.6-alpine3.10
 
 # envsubst and tools
 RUN apk add --no-cache openssh-keygen gettext jq git bash coreutils curl gomplate \
-  && ssh-keygen -f ~/.ssh/id_rsa -t rsa -N '' \
   && pip install yq awscli==${AWSCLI_VERSION:-'1.16.280'}
 
 RUN apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community git-crypt
